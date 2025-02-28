@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { io as socketClient } from 'socket.io-client';
+import './App.css';
 
 const socket = socketClient("https://your-backend-url"); // Replace with your Render backend URL
 
@@ -23,17 +24,32 @@ function App() {
         socket.emit('gatherResources');
     };
 
+    const trainTank = () => {
+        socket.emit('trainTank');
+    };
+
+    const trainAirplane = () => {
+        socket.emit('trainAirplane');
+    };
+
     return (
-        <div>
+        <div className="container">
             <h1>The Battle - My Village</h1>
-            <p>Wood: {village.resources.wood}</p>
-            <p>Stone: {village.resources.stone}</p>
-            <p>Food: {village.resources.food}</p>
-            <p>Tanks: {village.military.tanks}</p>
-            <p>Airplanes: {village.military.airplanes}</p>
+            <div className="resource">
+                <p>Wood: {village.resources.wood}</p>
+                <p>Stone: {village.resources.stone}</p>
+                <p>Food: {village.resources.food}</p>
+            </div>
+            <div className="military">
+                <p>Tanks: {village.military.tanks}</p>
+                <p>Airplanes: {village.military.airplanes}</p>
+            </div>
             <button onClick={gatherResources}>Gather Resources</button>
+            <button onClick={trainTank}>Train Tank</button>
+            <button onClick={trainAirplane}>Train Airplane</button>
         </div>
     );
 }
 
+export default App;
 export default App;
