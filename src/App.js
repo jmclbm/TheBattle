@@ -35,21 +35,37 @@ function App() {
     return (
         <div className="container">
             <h1>The Battle - My Village</h1>
-            <div className="resource">
-                <p>Wood: {village.resources.wood}</p>
-                <p>Stone: {village.resources.stone}</p>
-                <p>Food: {village.resources.food}</p>
+            <div className="resources">
+                <div className="resource">
+                    <h3>Wood</h3>
+                    <p>{village.resources.wood}</p>
+                </div>
+                <div className="resource">
+                    <h3>Stone</h3>
+                    <p>{village.resources.stone}</p>
+                </div>
+                <div className="resource">
+                    <h3>Food</h3>
+                    <p>{village.resources.food}</p>
+                </div>
             </div>
             <div className="military">
-                <p>Tanks: {village.military.tanks}</p>
-                <p>Airplanes: {village.military.airplanes}</p>
+                <div className="unit">
+                    <h3>Tanks</h3>
+                    <p>{village.military.tanks}</p>
+                </div>
+                <div className="unit">
+                    <h3>Airplanes</h3>
+                    <p>{village.military.airplanes}</p>
+                </div>
             </div>
-            <button onClick={gatherResources}>Gather Resources</button>
-            <button onClick={trainTank}>Train Tank</button>
-            <button onClick={trainAirplane}>Train Airplane</button>
+            <div className="actions">
+                <button onClick={gatherResources}>Gather Resources</button>
+                <button onClick={trainTank}>Train Tank</button>
+                <button onClick={trainAirplane}>Train Airplane</button>
+            </div>
         </div>
     );
 }
 
-export default App;
 export default App;
