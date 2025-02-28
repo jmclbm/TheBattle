@@ -34,32 +34,39 @@ function App() {
 
     return (
         <div className="container">
-            <h1>The Battle - My Village</h1>
-            <div className="resources">
-                <div className="resource">
+            <div className="header">
+                <h1>The Battle - My Village</h1>
+            </div>
+            <div className="section">
+                <div className="card">
+                    <img src="/icons/wood.png" alt="Wood" />
                     <h3>Wood</h3>
                     <p>{village.resources.wood}</p>
                 </div>
-                <div className="resource">
+                <div className="card">
+                    <img src="/icons/stone.png" alt="Stone" />
                     <h3>Stone</h3>
                     <p>{village.resources.stone}</p>
                 </div>
-                <div className="resource">
+                <div className="card">
+                    <img src="/icons/food.png" alt="Food" />
                     <h3>Food</h3>
                     <p>{village.resources.food}</p>
                 </div>
             </div>
-            <div className="military">
-                <div className="unit">
+            <div className="section">
+                <div className="card">
+                    <img src="/icons/tank.png" alt="Tank" />
                     <h3>Tanks</h3>
                     <p>{village.military.tanks}</p>
                 </div>
-                <div className="unit">
+                <div className="card">
+                    <img src="/icons/airplane.png" alt="Airplane" />
                     <h3>Airplanes</h3>
                     <p>{village.military.airplanes}</p>
                 </div>
             </div>
-            <div className="actions">
+            <div className="section">
                 <button onClick={gatherResources}>Gather Resources</button>
                 <button onClick={trainTank}>Train Tank</button>
                 <button onClick={trainAirplane}>Train Airplane</button>
