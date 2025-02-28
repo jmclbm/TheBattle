@@ -39,29 +39,29 @@ function App() {
             </div>
             <div className="section">
                 <div className="card">
-                    <img src="/icons/wood.png" alt="Wood" />
+                    <img src="/public/icons/wood.png" alt="Wood" />
                     <h3>Wood</h3>
                     <p>{village.resources.wood}</p>
                 </div>
                 <div className="card">
-                    <img src="/icons/stone.png" alt="Stone" />
+                    <img src="/public/icons/stone.png" alt="Stone" />
                     <h3>Stone</h3>
                     <p>{village.resources.stone}</p>
                 </div>
                 <div className="card">
-                    <img src="/icons/food.png" alt="Food" />
+                    <img src="/public/icons/food.png" alt="Food" />
                     <h3>Food</h3>
                     <p>{village.resources.food}</p>
                 </div>
             </div>
             <div className="section">
                 <div className="card">
-                    <img src="/icons/tank.png" alt="Tank" />
+                    <img src="/public/icons/tank.png" alt="Tank" />
                     <h3>Tanks</h3>
                     <p>{village.military.tanks}</p>
                 </div>
                 <div className="card">
-                    <img src="/icons/airplane.png" alt="Airplane" />
+                    <img src="/public/icons/airplane.png" alt="Airplane" />
                     <h3>Airplanes</h3>
                     <p>{village.military.airplanes}</p>
                 </div>
